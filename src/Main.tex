@@ -24,14 +24,15 @@
     DIV=20,             % Type area calculation
     onecolumn,          % Column layout
     variant=meti,       % Report variant (default: meti)
-    footerlogos,        % Show Footer logos
-    % glossary,         % Include Glossary (WON'T WORK WITH TECTONIC)
-    % acronyms,         % Include Acronyms (WON'T WORK WITH TECTONIC)
-    toc,                % Include Table of Contents
-    bibliography        % Include Bibliography (WON'T WORK CORRECTLY WITH TECTONIC)
+    footerlogos,        % Footer logos
+    numbers=noenddot
 ]{HSRTReport/HSRTReport}
 
-\input{Preamble}
+% ------------------------------------------------------------------------------
+% Preamble and Configuration
+% ------------------------------------------------------------------------------
+% Load document-specific settings and configurations
+\input{Preamble}         % Document metadata
 
 % ==============================================================================
 % Document Body
@@ -42,13 +43,12 @@
 % Content Sections
 % ------------------------------------------------------------------------------
 % Input content files in order of appearance
-\input{Chapters/01_template_demo}
-
-% ------------------------------------------------------------------------------
-% Glossary Processing
-% ------------------------------------------------------------------------------
-% Add all glossary entries to the document, even if not referenced
-\glsaddallunused
+\input{Chapters/01_allgemeines.tex}
+\input{Chapters/02_zentrale_orga.tex}
+\input{Chapters/03_dezentrale_orga.tex}
+\input{Chapters/04_vollversammlung.tex}
+\input{Chapters/05_vermoegen.tex}
+\input{Chapters/06_schlussbest.tex}
 
 \end{document}
 % ==============================================================================
