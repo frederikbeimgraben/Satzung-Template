@@ -1,0 +1,45 @@
+# Ignore Build/ and Output/
+build/
+*.log
+*.aux
+*.out
+*.toc
+*.bbl
+*.blg
+*.bcf*
+*.run.xml
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.lof
+*.lot
+*.xdv
+*.bak
+*.tex~
+*.bib~*
+*.nav
+*.snm
+*-blx.bib
+*(busy)
+*SAVE-ERROR
+*.sum
+*.equ
+*.glg
+*.glo
+*.gls
+*.ist
+*.alg
+*.acr
+*.acn
+*.pdf
+*.lol
+*.fmt
+
+# Ignore chapter backups and Temporary PDF files from Inkscape
+.chapter-backups/
+svg-inkscape/
+.config/
+.cache/
+
+# Ignore environment file
+.env

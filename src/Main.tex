@@ -1,0 +1,56 @@
+% ==============================================================================
+% Main Document File
+% ==============================================================================
+% Description: Main LaTeX document file for HSRT Report template
+% Author: Frederik Beimgraben
+% Date: 19.11.2025
+% ==============================================================================
+
+% ------------------------------------------------------------------------------
+% Document Class Declaration
+% ------------------------------------------------------------------------------
+% The HSRTReport class is based on KOMA-Script's scrreprt class
+% Options:
+%   - 11pt: Base font size (alternatives: 10pt, 12pt)
+%   - paper=a4: Paper format (alternatives: letter, a5, etc.)
+%   - oneside: Single-sided layout (alternative: twoside for duplex printing)
+%   - DIV=14: Type area calculation factor (higher = larger text area)
+%   - onecolumn: Single column layout (alternative: twocolumn)
+% ------------------------------------------------------------------------------
+\documentclass[
+    11pt,               % Base font size
+    paper=a4,           % Paper format
+    oneside,            % Single-sided printing
+    DIV=20,             % Type area calculation
+    onecolumn,          % Column layout
+    variant=meti,       % Report variant (default: meti)
+    footerlogos,        % Show Footer logos
+    % glossary,         % Include Glossary (WON'T WORK WITH TECTONIC)
+    % acronyms,         % Include Acronyms (WON'T WORK WITH TECTONIC)
+    toc,                % Include Table of Contents
+    bibliography        % Include Bibliography (WON'T WORK CORRECTLY WITH TECTONIC)
+]{HSRTReport/HSRTReport}
+
+\input{Preamble}
+
+% ==============================================================================
+% Document Body
+% ==============================================================================
+\begin{document}
+
+% ------------------------------------------------------------------------------
+% Content Sections
+% ------------------------------------------------------------------------------
+% Input content files in order of appearance
+\input{Chapters/01_template_demo}
+
+% ------------------------------------------------------------------------------
+% Glossary Processing
+% ------------------------------------------------------------------------------
+% Add all glossary entries to the document, even if not referenced
+\glsaddallunused
+
+\end{document}
+% ==============================================================================
+% End of Main Document
+% ==============================================================================

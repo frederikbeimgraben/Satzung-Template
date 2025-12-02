@@ -1,0 +1,181 @@
+% !TEX root = ../Main.tex
+% ==============================================================================
+% Document-Specific General Settings
+% ==============================================================================
+% Description: This file contains all document-specific settings including
+%              title, author information, abstract, keywords, and other
+%              metadata required for the title page and document properties.
+% Author: Frederik Beimgraben
+% Date: 23.11.2025
+% ==============================================================================
+
+% ------------------------------------------------------------------------------
+% Watermark and Date Configuration
+% ------------------------------------------------------------------------------
+% Configure document watermark and creation date
+% These settings affect the document's visual presentation and metadata
+% ------------------------------------------------------------------------------
+
+% Watermark text (leave empty for no watermark)
+% Example: \newcommand{\waterMarkText}{DRAFT}
+% Example: \newcommand{\waterMarkText}{CONFIDENTIAL}
+\newcommand{\waterMarkText}{}
+
+% Document creation date
+% Format: DD.MM.YYYY
+% This date appears on the title page and in document metadata
+\createdon{XX.XX.20XX}
+
+% ------------------------------------------------------------------------------
+% Document Title
+% ------------------------------------------------------------------------------
+% Main title of the document
+% This appears on the title page and in PDF metadata
+% For multi-line titles, use \\ for line breaks
+% ------------------------------------------------------------------------------
+\title{Template für wissenschaftliche Arbeiten}
+
+% ------------------------------------------------------------------------------
+% Title Page Data Fields
+% ------------------------------------------------------------------------------
+% Configure all fields that appear on the title page
+% Use \AddTitlePageDataLine{Label}{Content} for each field
+% Use \AddTitlePageDataSpace{dimension} to add vertical spacing
+% Use \newline within content for line breaks
+% ------------------------------------------------------------------------------
+
+% --- Document Topic – MeTI-SAT Specific ---
+% The main topic or theme of the document
+% \AddTitlePageDataLine{Thema}{
+%	 Thema-XXX: \newline
+%	 Template für wissenschaftliche Arbeiten
+% }
+
+\AddTitlePageDataSpace{5pt}
+
+
+% --- Author Information ---
+% Student name, semester, and contact information
+\author{Hans Maria Muster}
+\makeatletter
+\AddTitlePageDataLine{Vorgelegt von}{
+	\@author \newline
+	X. Fachsemester \newline
+	\href{mailto:hans-maria.muster@student.hs-reutlingen.de}{hans-maria.muster@student.hs-reutlingen.de}
+}
+\makeatother
+
+\AddTitlePageDataSpace{5pt}
+
+% --- Submission Date ---
+% Date when the document is submitted
+% Format: DD.MM.YYYY
+\AddTitlePageDataLine{Vorgelegt am}{XX.XX.20XX}
+
+\AddTitlePageDataSpace{5pt}
+
+% --- Academic Information ---
+% Study program and course details
+\AddTitlePageDataLine{Studiengang}{Medizinisch Technische Informatik B.Sc.}
+
+% Module/Course information
+\AddTitlePageDataLine{Modul}{
+	METIX.X \newline
+	Mustermodul
+}
+
+% --- Supervisor Information ---
+% Professor or supervisor name
+\AddTitlePageDataLine{Dozent:in}{Prof. Dr. Max Mustermann}
+
+% --- Semester Information ---
+% Academic semester (e.g., Wintersemester 2024/2025)
+\AddTitlePageDataLine{Semester}{Wintersemester 20XX/20XX}
+
+% --- Word Count – MeTI-SAT Specific ---
+% Automatic word count for the main content
+% Note: This only counts words in the specified file(s) (e.g. content.tex)
+% For multiple files, use \quickwordcount{file1,file2,file3}
+% \AddTitlePageDataLine{Wortanzahl}{\quickwordcount{content}}
+
+% ------------------------------------------------------------------------------
+% Abstract
+% ------------------------------------------------------------------------------
+% The abstract provides a concise summary of the document
+% It should include:
+%   - Research objective/hypothesis
+%   - Methodology used
+%   - Key findings/results
+%   - Main conclusions
+% Keep it brief (typically 150-250 words)
+% ------------------------------------------------------------------------------
+\newcommand{\titlepageabstract}{%
+	Das Abstract beschreibt in wenigen Sätzen die Zielsetzung und das Ergebnis
+	der Ausarbeitung. Das Abstract muss sich vollständig auf der Titelseite
+	befinden. Die Zeichensatzformatierung wird in einem eigenen Absatz
+	beschrieben. Das Abstract soll es den Lesern:innen ermöglichen, innerhalb
+	von wenigen Augenblicken zu erfassen, welcher Inhalt hinter der Überschrift
+	steckt und ob das Thema, aus Sicht der Leser:innen, zur weiteren Bearbeitung
+	lohnt. Das Abstract ist keine verbale Beschreibung des Inhaltsverzeichnisses,
+	sondern gibt kurz und knapp z.B. die Zielsetzung (z.B. Hypothese), die
+	eingesetzten Methoden und die erzielten Ergebnisse / Erkenntnisse bekannt.
+	Weitere Hinweise finden Sie außerdem im Vorlesungsskript.
+}
+
+% ------------------------------------------------------------------------------
+% Keywords
+% ------------------------------------------------------------------------------
+% Keywords help categorize and index the document
+% Separate keywords with commas
+% Choose 3-7 relevant keywords that describe the main topics
+% Use a standard selection of keywords (e.g. ACM CCS oder IEEE) to allow for
+% easy categorization and indexing of the document.
+% ------------------------------------------------------------------------------
+\newcommand{\titlepagekeywords}{%
+	Seminararbeit, wissenschaftliche Ausarbeitung, Bachelor-Thesis, Studium, Plagiat
+}
+
+% ------------------------------------------------------------------------------
+% Module Name
+% ------------------------------------------------------------------------------
+% The module name for this document (appears in footer)
+% This is typically the course or module code and name
+% ------------------------------------------------------------------------------
+\newcommand{\modulename}{METIX.Y – Mustermodul – WiSe XX/YY}
+
+% ==============================================================================
+% End of General Settings
+% ==============================================================================
+
+% ------------------------------------------------------------------------------
+% Logo Configuration Syntax
+% ------------------------------------------------------------------------------
+% \AddLogo{LogoName}{Scale}
+%
+% Parameters:
+%   LogoName - Name of the logo
+%   Scale   - Scaling factor
+%
+% Logo files must be placed in: HSRTReport/Assets/Images/
+% ------------------------------------------------------------------------------
+
+% ------------------------------------------------------------------------------
+% Available Logos
+% ------------------------------------------------------------------------------
+% Below are pre-configured logos for various departments and organizations.
+% Uncomment (remove the % at the beginning) the logo(s) you want to use.
+% Multiple logos can be active simultaneously and will be arranged automatically.
+% ------------------------------------------------------------------------------
+
+% --- INF/Kombiniert ---
+\AddLogo{INF/Kombiniert}{0.9}
+
+% --- INF/Simple ---
+% \AddLogo{INF/Simple}{0.9}
+
+% --- HSRT ---
+% \AddLogo{HSRT}{0.9}
+
+% ==============================================================================
+% End of Logo Configuration
+% ==============================================================================
