@@ -1,4 +1,0 @@
-[submodule "HSRTReport"]
-	path = src/HSRTReport
-	url = https://github.com/frederikbeimgraben/HSRTReport.git
-	branch = main
